@@ -1,0 +1,24 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return """
+    <h1>My Portfolio</h1>
+    <h2>About Me</h2>
+    <p>Hello! I'm learning Python and this is my first portfolio website.</p>
+
+    <h2>Projects</h2>
+    <ul>
+        <li>Project 1: Calculator App</li>
+        <li>Project 2: To-Do List</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: myemail@example.com</p>
+    <p>GitHub: <a href='https://github.com/myusername'>myusername</a></p>
+    """
+
+if __name__ == "__main__":
+    app.run(debug=True)
